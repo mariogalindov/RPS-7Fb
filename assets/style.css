@@ -1,0 +1,24 @@
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Hanalei', cursive; */
+
+/* Header */
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Player selection area */
+
+#player-sel {
+    font-size: 24px;
+}
+
+#username {
+    margin-right: 5px;
+}
+
+#start-btn {
+    border-radius: 5px;
+}
+

@@ -8,6 +8,10 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+    font-size: 20px;
+}
+
 /* Player selection area */
 
 #player-sel {
@@ -22,3 +26,84 @@ h1 {
     border-radius: 5px;
 }
 
+
+/* Game division */
+
+#player1, #result, #player2 {
+    position: relative;
+    display: inline-block;
+
+    /* actual box */
+    width: 20%;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    margin: 2%;
+
+    text-align: center;
+    vertical-align: top;
+
+    border: 1px solid #001;
+}
+
+#player1-name, #player2-name {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#player1-chosen, #player2-chosem {
+    margin-top: 25px;
+    font-size: 50px;
+}
+
+li {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+#outcomes {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    text-align: center;
+}
+
+#outcome-trackers {
+    display: inline-block;
+}
+
+#result h2 {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+/* Chat */
+
+#chat {
+    position: relative;
+
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #001;
+}
+
+#chat-messages {
+    height: 125px;
+    overflow: auto;
+    background-color: azure;
+    /* border: 1px solid #001; */
+}
+
+#chat-bar {
+    position: absolute;
+    bottom: 10px;
+}
+
+#chat-input {
+    width: 350px;
+    height: 37px;
+    vertical-align: middle;
+}

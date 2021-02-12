@@ -18,10 +18,10 @@
 <body>
     <div class="container-fluid">
         <div class="row justify-content-center bg-dark" id="header">
-            <h1 class="text-center text-white mt-1">RPS Game</h1>
+            <h1 class="text-center text-white mt-2">RPS Game</h1>
         </div>
 
-        <div class="row justify-content-center mt-1" id="player-sel"> <!--SZ-->
+        <div class="row justify-content-center mt-3 mb-2" id="player-sel"> <!--SZ-->
             <input id="username" type="text" placeholder="Player name">
             <button type="button" id="start-btn" class="btn-dark">Start</button>
         </div>
@@ -57,11 +57,11 @@
 
         </div>
 
-        <div id="chat">
+        <div class="row justify-content-center" id="chat">
             <div id="chat-messages"></div>
             <div id="chat-bar">
                 <input type="text" id="chat-input">
-                <button id="chat-btn">Send</button>
+                <button class="btn btn-success" id="chat-btn">Send</button>
             </div>
         </div>
 

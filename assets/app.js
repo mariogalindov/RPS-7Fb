@@ -299,4 +299,54 @@ $(document).on("click", "li", function(event) {
       return turn + 1
     });
   
-})
+});
+
+//Chat listeners 
+
+//Chat send button listener, grabs input and pushes it to firebase. Firebase's push automatically creates a unique key
+$("#chat-btn").on("click", function() {
+  //If the user actually wrote something
+  if ($("#chat-input").val() !== "") {
+    //get the val from the chat input and store it in message var
+    var message = $("#chat-input").val();
+
+
+    //Push all the info including the message to the chatData ref in Firebase
+    chatData.push({
+      name: username,
+      message: message,
+      time: firebase.database.ServerValue.TIMESTAMP,
+      idNum: playerNum
+    });
+
+    //Clear the previous message from the chat input
+    $("#chat-input").val("");
+  }
+});
+
+$("#chat-input").keypress(function(e) {
+  if (e.which === 13 && $("chat-input").val() !== "") {
+    var message = $("#chat-input").val();
+
+    chatData.push({
+      name: username,
+      message: message, 
+      time: firebase.database.ServerValue.TIMESTAMP,
+      idNum: playerNum
+    });
+
+    $("#chat-input").val("");
+  }
+});
+
+//Append messages to the chat-messages
+//Orders the messages by time 
+chatData.orderByChild("time").on("child_added", function(snapshot) {
+  $("#chat-messages").append(
+    $("<p>").addClass("player-" + snapshot.val().idNum),
+    $("<span>").text(snapshot.val().name + ":" + snapshot.val().message)
+  );
+
+  //Keeps div scrolled to bottom on each update
+  $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
+});

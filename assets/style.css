@@ -53,13 +53,22 @@ h2 {
 }
 
 #player1-chosen, #player2-chosem {
-    margin-top: 25px;
+    margin: 25px;
     font-size: 50px;
 }
 
+ul {
+    margin: 0 auto;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
 li {
-    margin: 12px 0;
+    /* margin: 4px 0; */
     font-size: 20px;
+    text-align: center;
+    list-style-type: none;
+    list-style-position: unset;
 }
 
 #outcomes {
